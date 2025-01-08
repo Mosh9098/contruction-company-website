@@ -1,0 +1,715 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold; 
+}
+/* #root { */
+  /* max-width: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+/* } */
+
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333; /* Dark background color */
+  color: #fff;
+  max-height: 40px;
+}
+
+.logo img {
+  max-height: 75px; /* Adjust as needed */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff; /* Text color */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+  color: #ff6600; /* Orange text color on hover */
+  background-color: rgba(255, 102, 0, 0.2); /* Light orange background on hover */
+  border-radius: 4px; /* Rounded corners for hover background */
+  padding: 0.5rem; /* Padding for hover effect */
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #e65c00;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-text button {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+  background-color: #ff3b3b;
+}
+
+
+/* footer */
+.footer {
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 1rem 2rem; /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem; /* Space between top and bottom sections */
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+}
+
+.footer-left h3, .footer-right h3 {
+  margin-top: 0;
+  color: #ff6600; /* Orange color for headings */
+}
+
+.footer-left p, .footer-right p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-left a, .footer-right a {
+  color: #fff; /* Link color */
+  text-decoration: none;
+}
+
+.footer-left a:hover, .footer-right a:hover {
+  color: #ff6600; /* Hover color for links */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444; /* Border to separate top and bottom sections */
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #fff; /* Icon color */
+  font-size: 1.5rem; /* Icon size */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff6600; /* Hover color for icons */
+}
+
+.footer-icon {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.2rem; /* Icon size */
+}
+
+
+.hero {
+  padding: 1rem 0;
+  background-color: #ffa500; 
+}
+
+.contact-form, .quote-request-form, .services {
+  background-color: #fff7e6; 
+  padding: 2rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ffa500; /* Orange button */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff7f00; /* Darker orange on hover */
+}
+
+
+.map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+/* services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-card {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.service-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.service-title {
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.service-description {
+  color: #666;
+
+}
+
+.service-image-container {
+  flex-shrink: 0;
+}
+
+.service-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* Container for all service cards */
+.service {
+  padding: 20px; /* Add padding around the container */
+  background-color: #f9f9f9; /* Light background color for the section */
+}
+
+/* Container for the service cards */
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual service card styling */
+.s-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Container for the service icon */
+.s-i-c {
+  margin-bottom: 15px;
+}
+
+/* Styling for the service icon */
+.s-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Styling for the service title */
+.s-title {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Container for the button */
+.view-services-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Space between cards and button */
+}
+
+/* Styling for the button */
+.view-services-button {
+  background-color: #ffa500; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and icon */
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.view-services-button:hover {
+  background-color: #ff7f00;
+}
+
+/* Styling for the arrow icon inside the button */
+.arrow-icon {
+  font-size: 18px; /* Adjust icon size */
+}
+
+
+
+.project-thumbnail img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project-thumbnail h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+.contact-container {
+  padding: 2rem;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.map {
+  flex: 1;
+}
+
+/* General Styling */
+.about-us {
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f9f5f2; /* Crème background */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  color: #e67e22; /* Orange color */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 30px;
+}
+
+/* Section Title Styling */
+.section-title {
+  color: #e67e22; /* Orange color */
+  border-bottom: 3px solid #e67e22;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+/* Section Content Styling */
+.section-content {
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Values List Styling */
+.values-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.values-list li {
+  background-color: #fff;
+  border: 1px solid #e67e22;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.values-list li strong {
+  color: #e67e22; /* Orange color for labels */
+}
+
+/* Projects.css */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  justify-content: center;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.project-card p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.project-card strong {
+  color: #333;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Gallery.css */
+
+/* Styles for the image container */
+.image-container {
+  border: 1px solid #ccc;
+  padding: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to make the images pop up */
+.image-container:hover {
+  transform: scale(1.05); /* Scale the image up slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Modal and navigation buttons styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #ff6600;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 1;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.play-pause-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.play-pause-button:hover {
+  background: #e65c00;
+}
+
+
+/* QuoteRequestForm.css */
+
+.quote-request-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote-request-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.quote-request-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quote-request-form input,
+.quote-request-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.quote-request-form input:focus,
+.quote-request-form textarea:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+.quote-request-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.quote-request-form button {
+  padding: 12px;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-request-form button:hover {
+  background-color: #e65c00;
+}
+
+
+/* clients */
+.clients-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.clients-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.client-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 150px; /* Card width */
+  height: 150px; /* Card height */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  overflow: hidden; /* Hide overflow */
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+}
+
+.client-logo {
+  max-width: 100%; /* Make sure the image is responsive */
+  max-height: 100%; /* Ensure the image fits within the card */
+  object-fit: contain; /* Preserve aspect ratio while fitting the image */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.client-card p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0; /* Remove margin for cleaner layout */
+}
